@@ -165,7 +165,7 @@ A.active {
 	</TR>
 	<TR>
 		<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath }/linkman_list.action"
-			target=main>－联系人列表</A></TD>
+			target=main>－ 联系人列表</A></TD>
 	</TR>
 	
 </TBODY>
@@ -186,11 +186,11 @@ A.active {
 											<TBODY>
 	<TR>
 		<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath }/visit_toAddPage.action"
-			target=main>－新增客户拜访</A></TD>
+			target=main>－ 新增客户拜访</A></TD>
 	</TR>
 	<TR>
 		<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath }/visit_list.action"
-			target=main>－客户拜访列表</A></TD>
+			target=main>－ 客户拜访列表</A></TD>
 	</TR>
 												
 											</TBODY>
@@ -239,11 +239,11 @@ A.active {
 	<TBODY>
 		<TR>
 			<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath }/customer_countSource.action"
-				target=main>－客户来源统计</A></TD>
+				target=main>－ 客户来源统计</A></TD>
 		</TR>
 		<TR>
 			<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath }/customer_countLevel.action"
-				target=main>－客户级别统计</A></TD>
+				target=main>－ 客户级别统计</A></TD>
 		</TR>
 		
 	</TBODY>
@@ -255,7 +255,7 @@ A.active {
 								</TR>
 								<TR>
 									<TD class=mainMenu onClick="MenuDisplay('table_6');"><SPAN
-										class=span id=table_6Span>＋</SPAN>系统管理</TD>
+										class=span id=table_6Span>＋</SPAN> 意见反馈</TD>
 								</TR>
 								<TR>
 									<TD>
@@ -264,16 +264,9 @@ A.active {
 											<TBODY>
 												<TR>
 													<TD class=menuSmall><A class=style2 href="#"
-														target=main>－角色管理</A></TD>
+														target=main>－ 意见反馈</A></TD>
 												</TR>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="#"
-														target=main>－用户管理</A></TD>
-												</TR>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="#"
-														target=main>－数据字典</A></TD>
-												</TR>
+												
 											</TBODY>
 										</TABLE>
 									</TD>
