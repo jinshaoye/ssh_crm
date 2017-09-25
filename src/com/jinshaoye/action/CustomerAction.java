@@ -60,7 +60,6 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 			ServletActionContext.getRequest().setAttribute("list", list);
 		} else {
 			//不输入任何内容，查询所有
-//			list();
 			list = customerService.findAll();
 		}
 		return "listcondition";
@@ -107,24 +106,18 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		return list;
 	}
 	
-	//3 客户列表的方法
+	//客户列表的方法
 	public String list() {
-//		List<Customer> list = customerService.findAll();
-		//放到域对象
-//		ServletActionContext.getRequest().setAttribute("list", list);
-		
 		//返回list放到值栈里面
 		list = customerService.findAll();
-		
 		return "list";
 	}
 
-	//4 删除的方法
+	//删除的方法
 	public String delete() {
 		//使用模型驱动获取表单提交cid值
 		int cid = customer.getCid();
 		
-		//删除规范写法：首先根据id查询，调用方法删除
 		//根据id查询
 		Customer c = customerService.findOne(cid);
 		//判断根据id查询对象是否为空
@@ -136,7 +129,7 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 	}
 
 	
-	//5 修改-根据id查询
+	//修改-根据id查询
 	public String showCustomer() {
 		//使用模型驱动得到cid值
 		int cid = customer.getCid();
@@ -147,7 +140,7 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		return "showCustomer";
 	}
 	
-	//6 修改的方法
+	//修改的方法
 	public String update() {
 		customerService.update(customer);
 		return "update";

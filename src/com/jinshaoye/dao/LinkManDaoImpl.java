@@ -32,25 +32,6 @@ public class LinkManDaoImpl extends HibernateDaoSupport implements LinkManDao {
 		this.getHibernateTemplate().update(linkMan);
 	}
 
-	//多条件组合查询-hql语句拼接方式实现
-//	public List<LinkMan> findCondition(LinkMan linkMan) {
-//		String hql = "from LinkMan where 1=1 ";
-//		List<Object> p = new ArrayList<Object>();
-//		//判断条件值是否为空
-//		if(linkMan.getLkmName()!=null && !"".equals(linkMan.getLkmName())) {
-//			hql += " and lkmName=?";
-//			p.add(linkMan.getLkmName());
-//		}
-//		//判断是否选择客户
-//		if(linkMan.getCustomer().getCid()!=null && linkMan.getCustomer().getCid()>0) {
-//			//判断客户里面cid值
-//			hql += " and customer.cid=?";
-//			p.add(linkMan.getCustomer().getCid());
-//		}
-//		
-//		return (List<LinkMan>) this.getHibernateTemplate().find(hql, p.toArray());
-//	}
-
 	//多条件组合查询-离线对象方式实现
 	@SuppressWarnings("all")
 	public List<LinkMan> findCondition(LinkMan linkMan) {

@@ -7,7 +7,6 @@
 	<!-- 设置上传文件大小 -->
 	<!-- <constant name="struts.multipart.maxSize" value="2097152"></constant> -->
 	
-	
 	<package name="demo1" extends="struts-default" namespace="/">
 		<action name="user_*" class="userAction" method="{1}">
 			<result name="loginsuccess">/index.htm</result>

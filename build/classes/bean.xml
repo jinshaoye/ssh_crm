@@ -47,10 +47,6 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
-	<!-- <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
-		<property name="sessionFactory" ref="sessionFactory"></property>
-	</bean> -->
-	
 	<import resource="classpath:customer.xml"/>
 	<import resource="classpath:linkman.xml"/>
 	<import resource="classpath:visit.xml"/>

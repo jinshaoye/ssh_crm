@@ -36,20 +36,20 @@ public class VisitAction extends ActionSupport implements ModelDriven<Visit>{
 		this.userService = userService;
 	}
 
-	//3 拜访列表的方法
+	//拜访列表的方法
 	public String list() {
 		List<Visit> list = visitService.findAll();
 		ServletActionContext.getRequest().setAttribute("list", list);
 		return "list";
 	}
 	
-	//2 新增方法
+	//新增方法
 	public String addVisit() {
 		visitService.addVisit(visit);
 		return "addVisit";
 	}
 
-	//1 到新增页面
+	//到新增页面
 	public String toAddPage() {
 		//查询所有客户
 		List<Customer> listCustomer = customerService.findAll();

@@ -56,7 +56,7 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
 		return "updateLinkMan";
 	}
 	
-	//4 到修改联系人页面
+	//到修改联系人页面
 	public String showLinkMan() {
 		//使用模型驱动得到id值
 		int linkid = linkMan.getLinkid();
@@ -74,7 +74,7 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
 		return "showLinkMan";
 	}
 
-	//3 联系人列表的方法
+	//联系人列表的方法
 	public String list() {
 		List<LinkMan> list = linkManService.listLinkMan();
 		ServletActionContext.getRequest().setAttribute("list", list);
@@ -125,32 +125,15 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
 			//把上传文件复制到服务器文件里面
 			FileUtils.copyFile(upload, serverFile);
 		}
-
-		/*
-		 * 可以封装联系人基本信息
-		 * 但是有cid是客户id值不能直接封装的
-		 * 把cid封装LinkMan实体类里面customer对象里面
-		 * 
-		 * */
-		//原始方式实现
-//		String scid = ServletActionContext.getRequest().getParameter("cid");
-//		int cid = Integer.parseInt(scid);
-		
-		//创建customer对象
-//		Customer c = new Customer();
-//		c.setCid(cid);
-//		
-//		linkMan.setCustomer(c);
-		
 		linkManService.addLinkMan(linkMan);
 		return "addLinkMan";
 	}
 	
 
 
-	//1 到新增联系人页面的方法
+	//到新增联系人页面的方法
 	public String toAddPage() {
-		//1.1 查询所有客户，把所有客户list集合传递到页面中显示（放到域对象）
+		//查询所有客户，把所有客户list集合传递到页面中显示（放到域对象）
 		//调用客户service里面的方法得到所有客户
 		List<Customer> listCustomer = customerService.findAll();
 		ServletActionContext.getRequest().setAttribute("listCustomer", listCustomer);

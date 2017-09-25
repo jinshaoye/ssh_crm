@@ -1,9 +1,5 @@
 package com.jinshaoye.entity;
-/**
- * 拜访实体类
- * @author asus
- *
- */
+
 public class Visit {
 
 	private Integer vid;
